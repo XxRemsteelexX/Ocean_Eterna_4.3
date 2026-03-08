@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ocean-eterna-mcp"
+version = "4.3.0"
+description = "MCP server for Ocean Eterna BM25 search engine"
+readme = "README.md"
+license = "BUSL-1.1"
+requires-python = ">=3.10"
+authors = [
+    { name = "Glenn Dalbey", email = "dalbeyglenn@gmail.com" },
+]
+keywords = ["mcp", "search", "bm25", "rag", "knowledge-base"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing :: Indexing",
+]
+dependencies = [
+    "fastmcp>=3.0.0",
+    "requests>=2.28.0",
+]
+
+[project.optional-dependencies]
+docs = [
+    "pymupdf>=1.24.0",
+    "pytesseract>=0.3.10",
+    "python-docx>=1.0.0",
+    "openpyxl>=3.1.0",
+    "pillow>=10.0.0",
+    "python-pptx>=0.6.21",
+    "beautifulsoup4>=4.12.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/XxRemsteelexX/Ocean_Eterna_4.3"
+Repository = "https://github.com/XxRemsteelexX/Ocean_Eterna_4.3"
+
+[project.scripts]
+ocean-eterna-mcp = "ocean_eterna_mcp:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ocean_eterna_mcp"]

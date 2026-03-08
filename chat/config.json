@@ -1,0 +1,43 @@
+{
+  "server": {
+    "port": 8888,
+    "host": "0.0.0.0"
+  },
+  "llm": {
+    "use_external": false,
+    "external_url": "https://openrouter.ai/api/v1/chat/completions",
+    "external_model": "your-model-here",
+    "local_url": "http://localhost:11434/v1/chat/completions",
+    "local_model": "llama3:8b",
+    "timeout_sec": 30,
+    "max_retries": 2,
+    "retry_backoff_ms": 500
+  },
+  "search": {
+    "top_k": 8,
+    "bm25_k1": 1.5,
+    "bm25_b": 0.75,
+    "context_window": 1,
+    "max_context_chars": 32000,
+    "score_threshold": 0.2
+  },
+  "reranker": {
+    "enabled": false,
+    "url": "http://127.0.0.1:8889/rerank",
+    "timeout_ms": 500,
+    "candidate_count": 50
+  },
+  "corpus": {
+    "manifest": "corpus/manifest.jsonl",
+    "storage": "corpus/storage.bin",
+    "chapter_guide": "corpus/chapter_guide.json"
+  },
+  "auth": {
+    "enabled": false,
+    "api_key": ""
+  },
+  "rate_limit": {
+    "enabled": false,
+    "requests_per_minute": 60
+  }
+}

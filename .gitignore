@@ -1,0 +1,65 @@
+# corpus data (user content)
+*.bin
+*.jsonl
+*.jsonl.bak
+*.jsonl.orig
+*.bm25s
+chat/corpus/*.bin
+chat/corpus/*.jsonl
+chat/corpus/*.json
+!chat/corpus/.gitkeep
+chat/corpus/originals/
+
+# compiled binaries
+ocean_chat_server
+ocean_chat_server_v*
+ocean_chat_server_fixed
+ocean_chat_server_prod
+*.o
+*.out
+
+# logs
+*.log
+/tmp/
+
+# backups
+*.bak*
+
+# editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# environment
+.env
+.env.local
+secrets.env
+
+# test data
+test_data/
+
+# build artifacts
+guten_9m_build/
+chat/guten_9m_build/
+
+# MCP registry tokens (NEVER commit)
+.mcpregistry_*
+
+# Build artifacts
+dist/
+*.egg-info/
+build/
+
+# Memory lock
+.memory/

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "ocean-eterna": {
+      "command": "python3",
+      "args": ["./mcp_server.py"],
+      "env": {
+        "OE_BASE_URL": "http://localhost:9090"
+      }
+    }
+  }
+}

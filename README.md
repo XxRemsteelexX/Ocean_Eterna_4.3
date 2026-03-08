@@ -213,6 +213,20 @@ Query -> HTTP Server -> Keyword Extraction -> Porter Stemmer
 
 ---
 
+## Tidepool -- Low-RAM Partitioned Mode (Experimental)
+
+For RAM-constrained devices (Raspberry Pi, cheap VPS), the `tidepool/` directory contains a partitioned mode that splits the index into 5 categories and only loads one at a time.
+
+| | Main OE | Tidepool |
+|---|---------|----------|
+| RAM (5K chunks) | 50 MB | 25 MB |
+| Targeted search | 13 ms | 6.5 ms |
+| Cross-category | instant | 190 ms |
+
+Status: proof of concept, not production-tested. See [tidepool/README.md](tidepool/README.md) for details.
+
+---
+
 ## Benchmarks
 
 The `benchmarks/` directory contains the automated benchmark suite used to generate the performance numbers above.
